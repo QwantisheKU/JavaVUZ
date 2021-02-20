@@ -11,20 +11,23 @@ public class Main {
         System.out.println("Введите второе число");
         float y = scan.nextFloat();
 
-        Comparator comp = (x1, y1) -> {
-            if (abs(x1) > abs(y1)){
-                System.out.println("Первое число больше второго по модулю");
-            }
-            else if (abs(x1) == abs(y1)){
-                System.out.println("Первое и второе числа равны по модулю");
-            }
-            else {
-                System.out.println("Первое число меньше второго по модулю");
-            }
-        };
+        toCompare comp = new toCompare();
         comp.compare(x, y);
     }
 }
 interface Comparator{
     void compare(float x, float y);
+}
+class toCompare implements Comparator {
+    public void compare(float x, float y) {
+        if (abs(x) > abs(y)){
+            System.out.println("Первое число больше второго по модулю");
+        }
+        else if (abs(x) == abs(y)){
+            System.out.println("Первое и второе числа равны по модулю");
+        }
+        else {
+            System.out.println("Первое число меньше второго по модулю");
+        }
+    }
 }
