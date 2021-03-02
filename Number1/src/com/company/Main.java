@@ -13,6 +13,22 @@ public class Main {
 
         toCompare comp = new toCompare();
         comp.compare(x, y);
+
+//        Comparator ancomp = new Comparator() {
+//            @Override
+//            public void compare(float x, float y) {
+//                if (abs(x) > abs(y)){
+//                    System.out.println("Первое число больше второго по модулю");
+//                }
+//                else if (abs(x) == abs(y)){
+//                    System.out.println("Первое и второе числа равны по модулю");
+//                }
+//                else {
+//                    System.out.println("Первое число меньше второго по модулю");
+//                }
+//            }
+//        };
+//        ancomp.compare(x, y);
     }
 }
 interface Comparator{
